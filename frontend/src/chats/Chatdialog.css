@@ -1,0 +1,18 @@
+
+.chatDialog{
+    display: flex;
+    background: white;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 5px;
+    margin: 0 auto ;
+}
+
+.menu{
+    width: 32%;
+    min-width: 400px;
+    border-right: 1px solid rgb(98, 91, 91);
+}
+.chat{
+    width: 68%;
+}

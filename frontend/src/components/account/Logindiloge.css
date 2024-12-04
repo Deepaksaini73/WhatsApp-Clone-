@@ -1,0 +1,105 @@
+.first-page{
+    background: #FCF5EB;
+    min-height: 100vh;
+}
+.login-header{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.whatsapp-logo{
+    display: flex;
+    margin: 2px;
+    align-items: center;
+    text-align: center;
+    color: #25D366;
+    margin-top: 20px;
+}
+.whatsapp-logo p{
+    margin-left: 5px;
+}
+
+.download-btn{
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #25D366;
+    color: black;
+    border-radius: 32px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 1.4s ;
+}
+
+.download-btn:hover {
+    background: black;
+    color: #fff;
+}
+
+
+/* login-dialoge css */
+
+.login-box{
+    background: white;
+    padding: 60px;
+    width: 50%;
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    border: 1.3px solid black;
+    border-radius: 20px;
+    margin-top: 30px;
+    font-size: 18px;
+    font-weight: 400;
+}
+.login-content h3{
+    font-size: 32px;
+    font-weight: 400;
+}
+.login-content ul{
+    margin-top: 30px;
+}
+
+.login-content ul li{
+    padding: 8px;
+    font-size: 18px;
+    font-weight: 400;
+    list-style-type:decimal;
+    margin-top: 12px;
+}  
+.login-links {
+    margin-top: 30px;
+}
+.login-links a{
+    color: black;
+    margin-top: 20px;
+    margin: 5px;
+    text-decoration-color: #25D366;
+    text-underline-offset: 2px;
+}
+.qr-container{
+    position: relative;
+}
+.qr-container img{
+    width: 250px;
+}
+.google-login{
+    position: absolute;
+    top: 50%;
+    left: 20px;
+}
+
+@media screen and (max-width:800px){
+    .login-box{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        height: 70%;
+    }
+    .qr-container {
+        margin-top: 40px;
+    }
+    
+}
