@@ -1,8 +1,17 @@
 .chat-menu{
     display: flex;
 }
+.chat-content{
+    width: 100%;
+    padding: 10px 15px;
+    background: #ffffff;
+    position: relative;
+}
+
+/*  sidebar css */
+
 .chat-sidebar{
-    width: 60px;
+    width: 80px;
     height: calc(100vh - 30px);
     padding-top: 30px;
     display: flex;
@@ -12,9 +21,121 @@
     flex-direction: column;
     background: #f0f2f5;
 }
-.chat-sidebar p {
+.chat-sidebar>div > p {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     cursor: pointer;
+}
+
+
+/* chat header css */
+
+.chat-header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 5px;
+    align-items: center; 
+  }
+  
+  .chat-name {
+    font-size: 22px;
+    font-weight: 700;
+  }
+  
+  .three-dot {
+    display: flex;
+    gap: 20px;
+    position: relative;
+
+  }
+  
+  .three-dot p i {
+    font-size: 20px;
+    cursor: pointer; 
+  }
+  
+  .three-dot-menu {
+    flex-direction: column;
+    width: 200px;
+    background: white;
+    box-shadow: 4px 4px 1px rgba(0, 0, 0, 0.05), -4px -4px 1px rgba(0, 0, 0, 0.05);
+    border: 0.5px solid rgba(0, 0, 0, 0.1);
+    position: absolute;
+    right: 15px;
+    top: 50px; 
+    z-index: 100;
+
+  }
+  
+  .three-dot-menu.active {
+    display: flex; 
+  }
+  
+  .three-dot-menu p {
+    margin: 0;
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  
+  .three-dot-menu p:hover {
+    background-color: #f0f0f0;
+  }
+  
+
+/* search bar css */
+.search-bar{
+    padding: 4px;
+    border-radius: 5px;
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background: #f0f2f5;
+    height: 25px;
+}
+.search-bar p{
+    margin-right: 40px;
+    padding-left: 10px;
+}
+
+.search-bar input{
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+}
+
+
+/* filter css */
+
+.filter-chat{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+button{
+    border: 0;
+    outline: 0;
+}
+.filter-chat .btn{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 15px;
+    font-size: 20px;
+    font-weight: 400;
+    border-radius: 22px;
+    background: #f0f2f5;
+    cursor: pointer;
+}
+.filter-chat .all-btn{
+    background-color: #e7fce3;
+}
+.filter-chat .all-btn button{
+    background-color: transparent;
+    color: #44bcca;
 }
