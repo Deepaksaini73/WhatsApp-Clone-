@@ -4,14 +4,16 @@ import {GoogleLogin} from '@react-oauth/google';
 import { jwtDecode } from "jwt-decode";
 import qrimg from '../../img/qr-code.png';
 import { AccountContext } from '../../context/AccountProvider';
+import addUser from '../../servics/api';
 
 const LoginDialog = () => {
 
   const {setAccount} = useContext(AccountContext);
 
-  const onLoginSucess =(res)=>{
-    const ans = jwtDecode(res.credential);
-    setAccount(ans);
+  const onLoginSucess =async (res)=>{
+    const decoded = jwtDecode(res.credential);
+    setAccount(decoded);
+    await addUser(decoded);
   }
   const onLoginError =()=>{
     console.log("error in login");

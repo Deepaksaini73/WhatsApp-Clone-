@@ -6,7 +6,7 @@ const EmptyChat=()=>{
     return (
         <>
         <div className='default-chat-img'>
-            <img style={{width:'100%',height:'100%'}} src={defaltImg} alt="" />
+            <img style={{width:'100%',minHeight:'99vh',overflow:'hidden'}} src={defaltImg} alt="" />
         </div>
         </>
     )
