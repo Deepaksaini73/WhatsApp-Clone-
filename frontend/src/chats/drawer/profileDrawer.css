@@ -3,10 +3,10 @@
     flex-direction: column;
     position: absolute;
     top: 0;
-    left: 80px;
+    left: 67px;
     background: #f0f2f5;
     height: 100%;
-    width: 408px;
+    width: 419px;
     animation: slider 0.02s;
     z-index: 100;
     border-left: 0.05px solid rgba(0,0,0,0.3);
@@ -26,6 +26,12 @@
 
 .img-box{
     font-size: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
 }
 
 .user-name-box,.about-box{

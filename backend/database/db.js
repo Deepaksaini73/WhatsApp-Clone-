@@ -1,13 +1,13 @@
 import  mongoose from 'mongoose';
 
 const Connection =async ()=>{
-    const URL = "mongodb://localhost:27017/mernprojects/whatsapp-clone"
+    const URL = "mongodb://localhost:27017/whatsapp-clone"
     try {
         await mongoose.connect(URL);
         console.log("database connected succefuly");
     } catch (error) {
-        console.log('erreor in connet database ',error.message); 
+        console.log('erreor in connet database ',error.message);
     }
 }
 
-export default Connection;
+export default Connection

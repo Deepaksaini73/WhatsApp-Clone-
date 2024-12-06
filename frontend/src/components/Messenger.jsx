@@ -8,7 +8,7 @@ import './account/Logindiloge.css';
 const Messenger = () => {
     const { account } = useContext(AccountContext);
     return (
-        <div className="first-page">
+        <div className="first-page"> 
             {account ?
                 <>
                     <div className="chat-dialoge">

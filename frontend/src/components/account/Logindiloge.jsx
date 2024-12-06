@@ -4,7 +4,7 @@ import {GoogleLogin} from '@react-oauth/google';
 import { jwtDecode } from "jwt-decode";
 import qrimg from '../../img/qr-code.png';
 import { AccountContext } from '../../context/AccountProvider';
-import addUser from '../../servics/api';
+import {addUser} from '../../servics/api';
 
 const LoginDialog = () => {
 
