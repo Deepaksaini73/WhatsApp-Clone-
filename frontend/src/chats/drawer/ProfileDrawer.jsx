@@ -21,7 +21,7 @@ function ProfileDrawer() {
         <div className="user-name-box">
           <p style={{ width: '100px', color: '#228780' }}>Your name</p>
           <div className='user-name'>
-            <p >Deepak saini</p>
+            <p >{account.name}</p>
             <p ><i class="bi bi-pencil"></i></p>
           </div>
         </div>

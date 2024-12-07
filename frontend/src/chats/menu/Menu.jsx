@@ -2,7 +2,7 @@ import Sidebar from './Sidebar';
 import ChatMenuHeader from './ChatMenuHeader';
 import Searchbar from './Searchbar';
 import FilterChat from './FilterChat';
-import Conversation from './Conversations';
+import Conversations from './Conversations';
 import './menu.css'
 
 
@@ -16,8 +16,7 @@ const Menu=()=>{
                 <ChatMenuHeader/>
                 <Searchbar/>
                 <FilterChat/>
-                <Conversation/>
-
+                <Conversations/>
             </div>
         </div>
     )

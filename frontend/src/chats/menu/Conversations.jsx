@@ -1,7 +1,8 @@
 import { useEffect , useState } from "react";
 import { getUsers } from "../../servics/api";
+import Conversation from "./Conversation";
 
-const Conversation =()=>{
+const Conversations =()=>{
     const [users,setusers] = useState([]);
     useEffect(()=>{
         const fetchData = async ()=>{
@@ -11,10 +12,15 @@ const Conversation =()=>{
         fetchData();
     },[])
     return (
-        <>
-        <div>this is conversations</div>
-        </>
+        <div style={{marginTop:'30px'}}>
+            {
+                users.map(user=>(
+                    <Conversation user={user} />
+                ))
+            }
+            <hr  />
+        </div>
     )
 }
 
-export default Conversation;
+export default Conversations;
