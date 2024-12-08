@@ -1,8 +1,10 @@
-import { useEffect , useState } from "react";
+import { useContext, useEffect , useState } from "react";
 import { getUsers } from "../../servics/api";
 import Conversation from "./Conversation";
+import { AccountContext } from "../../context/AccountProvider";
 
 const Conversations =()=>{
+    const {account} = useContext(AccountContext);
     const [users,setusers] = useState([]);
     useEffect(()=>{
         const fetchData = async ()=>{
@@ -15,6 +17,7 @@ const Conversations =()=>{
         <div style={{marginTop:'30px'}}>
             {
                 users.map(user=>(
+                    user.sub !== account.sub &&
                     <Conversation user={user} />
                 ))
             }

@@ -12,14 +12,14 @@ function ChatMenuHeader() {
     <div className='chat-header'>
         <div className='chat-name'>Chats</div>
         <div className='three-dot'>
-          <p className='create-new-chat'><i class="bi bi-folder-plus"></i></p>
-          <p className='three-dot-btn' onClick={toggleMenu}><i class="bi bi-three-dots-vertical"></i></p>
+          <p className='create-new-chat'><i className="bi bi-folder-plus"></i></p>
+          <p className='three-dot-btn' onClick={toggleMenu}><i className="bi bi-three-dots-vertical"></i></p>
         </div>
 
     </div>
     {
       menuVisible &&  (
-                    <div className='three-dot-menu'>
+                    <div className='three-dot-menu' onClick={()=>{setMenuVisible(false)}}>
                         <p>New Group</p>
                         <p>Start Massage</p>
                         <p>Select Chat</p>

@@ -1,9 +1,14 @@
-import React from 'react'
+import React from 'react';
+import MessageFooter from './MessageFooter';
+
 
 function Message() {
   return (
-    <div>Message</div>
-  )
+    <div>
+    <div className='message-box'>message</div>
+    <MessageFooter/>
+    </div>
+    )
 }
 
 export default Message

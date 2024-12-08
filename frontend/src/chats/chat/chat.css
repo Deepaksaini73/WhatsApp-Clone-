@@ -14,8 +14,8 @@
     gap: 10px;
   }
   .chatbox-header .user-info img {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
     object-fit: cover;
   }
@@ -33,4 +33,122 @@
 }
 .chatbox-header .applications i{
     font-size: 20px;
+}
+
+/* message box css */
+
+.message-box{
+  height: calc(80vh - 20px);
+  background-image: url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png');
+  background-size: 50%;
+  overflow-y: scroll;
+  padding: 10px 30px 10px 30px;
+}
+.message-box::-webkit-scrollbar {
+  width: 8px;
+
+}
+
+.message-box::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 12px;
+}
+
+.message-box::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 12px;
+}
+
+
+.message-box::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* 
+message footer css */
+
+.message-header{
+  height: 50px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  gap: 20px;
+  padding: 5px 15px 10px 15px ;
+  background-color: #f0f2f5;
+}
+.attachment{
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  color: black; 
+  cursor: pointer;
+  position: relative;
+}
+.bi-plus{
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  transition: 0.2s ease-in;
+}
+.attachment .hover{
+  rotate: 135deg;
+  background: #a3a5a8;
+}
+
+.attachment .attachment-items{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 0px;
+  top: -280px; 
+  z-index: 100;
+  width: 170px;
+  background: white;
+  box-shadow: 4px 4px 1px rgba(0, 0, 0, 0.05), -4px -4px 1px rgba(0, 0, 0, 0.05);
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  padding: 10px 15px;
+  border-radius: 15px;
+}
+
+.attachment .attachment-items p{
+  text-align: left;
+  height: 30px;
+  padding: 6px;
+  border-radius: 10px;
+}
+.attachment .attachment-items p:hover{
+  background: #f0f2f5;
+}
+.attachment .attachment-items p i{
+  font-size: 20px;
+}
+.attachment i{
+  font-size: 40px;
+}
+.message-input-box{
+  height: 35px;
+  width: 90%;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  background: #fff;
+  border-radius: 10px;
+  padding: 5px 15px;
+}
+.message-input-box i{
+  font-size: 20px;
+  width: 50px;
+}
+.message-input-box .ppp{
+  background: transparent;
+  width: 100%;
+  font-size: 18px;
+  font-weight: 400;
+}
+.audio-message i{
+  font-size: 23px;
+  color: black;
 }
