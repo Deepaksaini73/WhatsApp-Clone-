@@ -1,3 +1,18 @@
+/* message css */
+
+.messages-box{
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  border-bottom: 1px solid #eee;
+}
+.message {
+  padding: 8px 10px;
+  margin-bottom: 5px;
+  background-color: #e1ffc7;
+  border-radius: 5px;
+  max-width: 70%;
+}
 
 /* chat-header css */
 
@@ -67,14 +82,17 @@
 /* 
 message footer css */
 
-.message-header{
-  height: 50px;
+.message-footer{
+  width:calc(68% - 30px);
+  min-height: 50px;
   display: flex;
   text-align: center;
   align-items: center;
   gap: 20px;
   padding: 5px 15px 10px 15px ;
   background-color: #f0f2f5;
+  position: fixed;
+  bottom: 10px;
 }
 .attachment{
   display: flex;
@@ -129,7 +147,7 @@ message footer css */
   font-size: 40px;
 }
 .message-input-box{
-  height: 35px;
+  min-height: 35px;
   width: 90%;
   display: flex;
   text-align: center;
@@ -142,9 +160,15 @@ message footer css */
   font-size: 20px;
   width: 50px;
 }
-.message-input-box .ppp{
-  background: transparent;
-  width: 100%;
+.message-input-box textarea{
+  flex: 1;
+  resize: none;
+  padding: 10px;
+  max-height: 140px; /* Adjust max-height */
+  overflow-y: auto;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
   font-size: 18px;
   font-weight: 400;
 }

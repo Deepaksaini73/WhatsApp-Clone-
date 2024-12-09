@@ -1,12 +1,13 @@
 import { useContext } from 'react';
 import  { AccountContext } from '../../context/AccountProvider';
+import { setConversation } from '../../servics/api';
 import './conversation.css';
 
 const Conversation=({user})=>{
-    const {setPerson} = useContext(AccountContext);
-    const getuser=()=>{
+    const {setPerson,account} = useContext(AccountContext);
+    const getuser= async()=>{
         setPerson(user);
-        
+        await setConversation({senderId:account.sub,reciverId:user.sub});
     }
     return (
         <>

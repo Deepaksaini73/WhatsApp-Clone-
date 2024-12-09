@@ -3,6 +3,7 @@ import cors from 'cors';
 import bodyParser from 'body-parser';
 import Connection from './database/db.js';
 import User from './schema/User.js';
+import conversation from './schema/Conversation.js';
 
 
 const app = express(); 
@@ -40,9 +41,38 @@ app.get('/users',async (req,resp)=>{
     }
 })
 
+app.post('/conversation/add',async (req,resp)=>{
+    try {
+        const senderId = req.body.senderId;
+        const reciverId = req.body.reciverId;
 
+        const exist =  await conversation.findOne({members:{$all :[reciverId,senderId]}})
 
+        if(exist) {
+            return resp.status(200).json('conversation already exist');
+        }
 
+        const newconversation = new conversation({
+            members:[reciverId,senderId]
+        })
+        await newconversation.save();
+        return resp.status(200).json('conversation added sucessfully');
+    } catch (error) {
+        return resp.status(500).json(error.message);
+    }
+})
+
+app.post('/conversation/get',async (req,resp)=>{
+    try {
+        const senderId = req.body.senderId;
+        const reciverId = req.body.reciverId;
+
+         let conversation = await conversation.findOne({members:{$all :[reciverId,senderId]}})
+        return resp.status(200).json(conversation);
+    } catch (error) {
+        return resp.status(500).json(error.message);
+    }
+})
 
 const PORT = 5000;
 app.listen(PORT,()=>console.log(`server is running on port  ${PORT} ...`));

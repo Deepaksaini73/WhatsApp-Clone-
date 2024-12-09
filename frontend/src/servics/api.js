@@ -20,3 +20,19 @@ export const getUsers = async ()=>{
 
     }
 }
+
+export const setConversation = async (data)=>{
+    try {
+        await axios.post(`${url}/conversation/add`,data);
+    } catch (error) {
+        console.log("Error while get setconversation  api " , error.message);
+    }
+}
+export const getConversation = async (data)=>{
+    try {
+        const response = await axios.post(`${url}/conversation/get`,data);
+        return response;
+    } catch (error) {
+        console.log("Error while get getconversation  api " , error.message);
+    }
+}

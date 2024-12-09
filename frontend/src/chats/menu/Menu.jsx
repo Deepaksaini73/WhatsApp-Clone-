@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Sidebar from './Sidebar';
 import ChatMenuHeader from './ChatMenuHeader';
 import Searchbar from './Searchbar';
@@ -7,6 +8,8 @@ import './menu.css'
 
 
 const Menu=()=>{
+    const [search,setSearch] = useState("");
+    
     return(
         <div className="chat-menu">
             <div className="sidebar">
@@ -14,9 +17,9 @@ const Menu=()=>{
             </div>
             <div className="chat-content">
                 <ChatMenuHeader/>
-                <Searchbar/>
+                <Searchbar setSearch={setSearch}/>
                 <FilterChat/>
-                <Conversations/>
+                <Conversations search={search}/>
             </div>
         </div>
     )
