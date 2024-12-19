@@ -67,8 +67,8 @@ app.post('/conversation/get',async (req,resp)=>{
         const senderId = req.body.senderId;
         const reciverId = req.body.reciverId;
 
-         let conversation = await conversation.findOne({members:{$all :[reciverId,senderId]}})
-        return resp.status(200).json(conversation);
+        const conver =  await conversation.findOne({members:{$all :[reciverId,senderId]}})
+        return resp.status(200).json(conver);
     } catch (error) {
         return resp.status(500).json(error.message);
     }

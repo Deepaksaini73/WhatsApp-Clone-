@@ -8,9 +8,9 @@ import './chat.css';
 const  ChatBox = ()=>{
   const {account,person} = useContext(AccountContext);
   useEffect(()=>{
-    const getconversationDetails =async()=>{
-      let data = await getConversation({senderId:account.sub,reciverId:person.sub});
-      console.log(data);
+    const getconversationDetails = async()=>{
+      let datai = await getConversation({senderId:account.sub,reciverId:person.sub});
+      console.log(datai);
     }
     getconversationDetails();
   },[person.sub]);

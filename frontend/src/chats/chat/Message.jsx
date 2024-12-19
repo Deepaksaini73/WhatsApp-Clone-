@@ -1,11 +1,12 @@
 import React, { useState, useRef } from 'react';
-
 import MessageFooter from './MessageFooter';
 
 
 function Message() {
-     const [messages, setMessages] = useState([]); 
-     const messagesEndRef = useRef(null);
+    const [messages, setMessages] = useState([]); 
+    const messagesEndRef = useRef(null);
+
+
   return (
     <div>
         <div className="message-box">
